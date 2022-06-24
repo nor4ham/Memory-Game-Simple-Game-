@@ -11,7 +11,8 @@ body {
 }
 
 .header   { grid-area: header; }
-
+    .nev{grid-area:nev}
+    .logo   { grid-area: logo; }
 .footer   { grid-area: footer; }
 .sidebar  { grid-area: sidebar; }
     .menu1  { grid-area: menu1; }
@@ -31,24 +32,20 @@ body {
 
 
 	/* header */
-.header {
-    display: grid;
-    padding: 20px;
-    color: #fff;
-    background-color: #222222;
-}
-.header >ul{
+
+.nev >ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 
+
 }
-.header  >ul >li {
+.nev ul >li {
   float: left;
 
 }
-.header  >ul >li >a {
+.nev ul >li >a {
   display: block;
   color: white;
   text-align: center;
@@ -56,9 +53,17 @@ body {
   text-decoration: none;
 
 }
-.header  >ul >li >a :hover  {
-  background-color: rgb(181, 147, 147);
+.nev ul >li >a :hover  {
+  background-color: rgba(127, 119, 119, 0);
 }
+.logo>a>img{
+
+  width: 50px;
+  height: 50px;
+  margin-left: 40%;
+}
+
+
 	/* header end */
 
 
@@ -182,12 +187,26 @@ body {
 
 /* MOBILE VIEW */
 @media screen and (max-width: 458px) {
+  .header{
+    display: grid;
+    grid-template-columns: auto 20%;
+    grid-template-areas:
+        "nev logo ";
+
+    background-color: #222222;
+     font-size: 100%;
+    color: #fff;
+}
+  
     .sidebar {
         display: grid;
         grid-gap: 1em;
-        grid-template-columns: auto auto auto;
+        grid-template-rows: auto 2% auto;
         grid-template-areas:
-            "menu1  menu2  menu3";
+        
+            "menu1 "
+            "menu2"
+            "menu3";
     
         padding: 20px;
     
@@ -220,14 +239,31 @@ body {
     
         background-color: #F3F3F3;
     }
+
 }
 
 /* DESKTOP-TABLET VIEW */
 @media screen and (min-width: 459px) {
+  .header{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: auto auto 20%;
+    grid-template-areas:
+        "nev nev logo ";
+
+    padding: 20px;
+    background-color: #222222;
+
+    text-align: center;
+    font-size: 100%;
+    color: #fff;
+}
+
+
     .sidebar {
         display: grid;
         grid-gap: 1em;
-        grid-template-rows: 40px 40px 40px;
+        grid-template-rows: auto 2% auto;
         grid-template-areas:
             "menu1"
             "menu2"
