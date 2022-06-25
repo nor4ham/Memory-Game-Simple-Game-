@@ -8,29 +8,23 @@ html {
 body {
     margin: 0px;
     background-color: #F4F6F6;
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-align: center;
+
 }
 
-.header   { grid-area: header; }
-    .nev{grid-area:nev}
+.header   { grid-area: header;    background-color: #7DAB3E;}
+    .nev    {grid-area:nev}
     .logo   { grid-area: logo; }
 .footer   { grid-area: footer; }
-.sidebar  { grid-area: sidebar; }
+.sidebar  { grid-area: sidebar;        background-color:#F76CA1; }
     .menu1  { grid-area: menu1; }
     .menu2  { grid-area: menu2; }
     .menu3  { grid-area: menu3; }
-.content  { grid-area: content; }
-    .subject1       { grid-area: subject1; }
-    .subject2       { grid-area: subject2; }
-    .content1-left  { grid-area: content1-left; }
-    .content1-right { grid-area: content1-right; }
-    .content2-left  { grid-area: content2-left; }
-    .content2-right { grid-area: content2-right; }
-    .content3       { grid-area: content3; }
-
-
-
-
-
+.content  { grid-area: content;background-color: #ffffff; }
+   
 	/* header */
 
 .nev >ul{
@@ -72,15 +66,15 @@ body {
 	/* footer */
 .footer {
     padding: 20px;
-    background-color: #a2a2a2;
-	height: auto;
+    background-color: #7DAB3E;
+    height: auto;
 
     text-align: center;
     font-size: 100%;
     color: #fff;
 }
 .footer-distributed {
-	background-color: #292c2f;
+	/* background-color: #292c2f; */
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -136,7 +130,7 @@ body {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	background-color: #33383b;
+  background-color: #7DAB3E;
 	border-radius: 2px;
 	font-size: 20px;
 	color: #ffffff;
@@ -154,7 +148,28 @@ body {
 
 /* end footer */
 
-    
+/* sidebar */
+
+.button {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #a78002;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background-color: #f0c127 ;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: #dba800;
+ }
+
+
+ /* end sidebar */
+       
 /* MOBILE VIEW */
 @media screen and (max-width: 458px) {
   .wrapper {
@@ -193,7 +208,6 @@ body {
     grid-template-areas:
         "nev logo ";
 
-    background-color: #222222;
      font-size: 100%;
     color: #fff;
 }
@@ -209,9 +223,8 @@ body {
             "menu3";
     
         padding: 20px;
-    
-        background-color: #525252; /*#34495E;*/
-        /*border-right : 1px solid  #E5E8E8;*/
+            border-right : 1px solid  #E5E8E8;
+
     
         /*min-width: 125px;
         max-width: 125px;*/
@@ -223,21 +236,11 @@ body {
 
     .content {
         display: grid;
+        grid-template-columns:repeat(3,auto) ;
+
         grid-gap: 1em;
-        grid-template-areas:
-            "subject1"
-            "subject2"
-            "content1-left"
-            "content1-right"
-            "content2-left"
-            "content2-right"
-            "content3";
+        padding: 20px;    
         
-        max-width: 458px;
-        justify-content: center;  /* HORIZONTALLY aligns all "grid-template-columns" */
-        padding: 20px;
-    
-        background-color: #F3F3F3;
     }
 
 }
@@ -252,7 +255,7 @@ body {
         "nev nev logo ";
 
     padding: 20px;
-    background-color: #222222;
+
 
     text-align: center;
     font-size: 100%;
@@ -276,37 +279,37 @@ body {
         font-size: 100%;
         color: #fff;
 
-        background-color: #2b804ac7; 
     }
-
+/* game area */
     .content {
+
         display: grid;
+        grid-template-columns:auto auto auto auto auto auto;
+
         grid-gap: 2em;
-        grid-template-columns: 45% 45%;
-        grid-template-areas:
-            "subject1       subject1"
-            "subject2       subject2"
-            "content1-left  content1-right"
-            "content2-left  content2-right"
-            "content3       content3";
-        
-        max-width: 100%;
-		height: 530px;
-        justify-content: center;  /* HORIZONTALLY aligns all "grid-template-columns" */
-        padding: 20px;
-    
-        background-color: #F3F3F3;
+        padding: 20px;     
+         max-width: 100%;
+        justify-content: center; 
     }
 }
-    .content-inner {
-        padding: 10px;
+.card {
+  padding: 10px;
+  background-color: #86CDEA;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px -2px #fff420; 
 
-        text-align: center;
-        font-size: 80%; 
-        color: #444;
-
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0px 0px 5px -2px #777777; 
+}
+.card>img{
+     
+  width: 100%;
+  height:100px ;
+}
+ 
+    .card:active {
+    /* Let’s also add a click effect. The :active pseudo class will be triggered every time the element gets
+       clicked and will apply a .2s transition to its size:*/
+      transform: scale(0.70);
+      transition: transform .2s;
     }
-
+   
+    
