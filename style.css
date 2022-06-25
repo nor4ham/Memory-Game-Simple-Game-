@@ -24,9 +24,6 @@ body {
     .menu2  { grid-area: menu2; }
     .menu3  { grid-area: menu3; }
 .content  { grid-area: content;background-color: #ffffff; }
-    .card1  { grid-area: card1; }
-    .card2  { grid-area: card2; }
-    .card3  { grid-area: card3; }   
 	/* header */
 
 .nev >ul{
@@ -236,11 +233,19 @@ body {
 
     .content {
         display: grid;
-        grid-template-columns:repeat(3,auto) ;
+        grid-template-columns:auto ;
         grid-gap: 1em;
         padding: 20px;    
         
     }
+    #main {
+      display: grid;
+      grid-template-columns:auto auto;
+      grid-gap: 1em;
+      padding: 10px;     
+      max-width: 100%;
+      justify-content: center; 
+  }
 
 }
 
@@ -282,32 +287,39 @@ body {
 /* game area */
     .content {
         display: grid;
-/*         grid-template-columns: 12% 12% 12% 12% 12% 12%; */
-        grid-template-columns:auto auto auto;
-        grid-template-areas:
-            "card1 card2 card3 "
-          
-            ;
+        grid-template-columns:auto  ;
             grid-gap: 2em;
             padding: 20px;     
             max-width: 100%;
             justify-content: center; 
     
     }
+    #main {
+      display: grid;
+      grid-template-columns:auto auto auto  ;
+          grid-gap: 2em;
+          padding: 20px;     
+          max-width: 100%;
+          justify-content: center; 
+  
+  }
 }
 
 
-.card {
-
+.horses {
+  
   padding: 10px;
-  background-color: #86CDEA;
   border-radius: 5px;
   box-shadow: 0px 0px 30px -2px #fff420; 
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
-
+  background: rgb(121, 210, 239) url("Kristal-logo.png") no-repeat  center;
+  cursor: pointer;
 }
+.horseImage {
+  opacity: 0;
+  }
 
 /* .card:active {
   /* Let’s also add a click effect. The :active pseudo class will be triggered every time the element gets
