@@ -149,9 +149,10 @@ body {
 
 /* sidebar */
 
-.button {
+#replay {
   display: block;
   width: 100px;
+  height: 100px;
   margin: 0 auto;
   height: 30px;
   line-height: 30px;
@@ -162,7 +163,7 @@ body {
   background-color: #f0c127 ;
   border-radius: 5px;
 }
-.button:hover {
+#replay:hover {
   background-color: #dba800;
  }
 
