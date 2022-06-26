@@ -4,4 +4,8 @@
 The purpose of the game is for children to learn about different horses.
 It can help children with their concentration skills.
 # Steps 
-Turn the card over
+1-Turn the card over
+2-Turn the other card over
+3-if those cards do  match then  give one score 
+4-if not turn the both cards over again
+5-if replay turn  all cards over
