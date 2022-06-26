@@ -5,9 +5,9 @@
 The purpose of the game is for children to learn about different horses.
 It can help children with their concentration skills.
 I use HTML,CSS and js.
-HTML is the standard markup language for Web pages.
-CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed
-JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.
+- HTML is the standard markup language for Web pages.
+- CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed
+- JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.
 
 
 ### Steps
